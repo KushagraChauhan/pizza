@@ -17,8 +17,271 @@
     height: 100%;
   }
 
-* {box-sizing: border-box;}
+/* * {box-sizing: border-box;} */
+.container,
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.frame {
+    width: 500px;
+    height: 500px;
+    /* z-index: 10; */
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    height: 130px;
+    width: 400px;
+    top: 135px;
+    left: 70px;
+    perspective: 60px;
+    transform-style: preserve-3d;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+
+}
+
+.card-1 {
+    animation: animate1 5s linear infinite;
+}
+
+.card-2 {
+    animation: animate2 5s linear infinite;
+}
+
+.card-3 {
+    animation: animate3 5s linear infinite;
+}
+
+
+
+@keyframes animate1 {
+    0%, 100% {
+        transform: translate3d(0, 0, 0);
+    }
+    25% {
+        transform: translate3d(200px, 0, -45px);
+    }
+    50% {
+        transform: translate3d(-200px, 0, -45px);
+    }
+}
+
+@keyframes animate2 {
+    0%, 100% {
+        transform: translate3d(200px, 0, -45px);
+    }
+    25% {
+        transform: translate3d(-200px, 0, -45px);
+    }
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes animate3 {
+    0%, 100% {
+        transform: translate3d(-200px, 0, -45px);
+    }
+    25% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(200px, 0, -45px);
+    }
+}
+.img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 300px;
+}
+
+@media screen and (max-width: 1260px) {
+    .back {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .back {
+        width: 100%;
+    }
+}
+
+.button_base {
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -100px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.button_base:hover {
+    cursor: pointer;
+}
+    .b07_3d_double_roll {
+      perspective: 500px;
+      -webkit-perspective: 500px;
+      -moz-perspective: 500px;
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+  }
+
+  .b07_3d_double_roll div {
+      position: absolute;
+      text-align: center;
+      padding: 10px;
+      border: #000000 solid 1px;
+      pointer-events: none;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+  }
+
+  .b07_3d_double_roll div:nth-child(1) {
+      color: white;
+      background-color: black;
+      z-index: 0;
+      width: 100%;
+      height: 50px;
+      clip: rect(0px, 100px, 50px, 0px);
+      position: absolute;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      transform-origin: 50% 50% -25px;
+      -webkit-transform-origin: 50% 50% -25px;
+      -moz-transform-origin: 50% 50% -25px;
+  }
+
+  .b07_3d_double_roll div:nth-child(2) {
+      color: #000000;
+      background-color: #000000;
+      z-index: -1;
+      width: 100%;
+      height: 50px;
+      clip: rect(0px, 100px, 50px, 0px);
+      position: absolute;
+      transform: rotateX(90deg);
+      -webkit-transform: rotateX(90deg);
+      -moz-transform: rotateX(90deg);
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      transform-origin: 50% 50% -25px;
+      -webkit-transform-origin: 50% 50% -25px;
+      -moz-transform-origin: 50% 50% -25px;
+  }
+
+  .b07_3d_double_roll div:nth-child(3) {
+      color: white;
+      background-color: black;
+      z-index: 0;
+      width: 100%;
+      height: 50px;
+      clip: rect(0px, 200px, 50px, 100px);
+      position: absolute;
+      transition: all 0.2s ease 0.1s;
+      -webkit-transition: all 0.2s ease 0.1s;
+      -moz-transition: all 0.2s ease 0.1s;
+      transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+      transform-origin: 50% 50% -25px;
+      -webkit-transform-origin: 50% 50% -25px;
+      -moz-transform-origin: 50% 50% -25px;
+  }
+
+  .b07_3d_double_roll div:nth-child(4) {
+      color: #000000;
+      background-color: #000000;
+      z-index: -1;
+      width: 100%;
+      height: 50px;
+      clip: rect(0px, 200px, 50px, 100px);
+      position: absolute;
+      transform: rotateX(-90deg);
+      -webkit-transform: rotateX(-90deg);
+      -moz-transform: rotateX(-90deg);
+      transition: all 0.2s ease 0.1s;
+      -webkit-transition: all 0.2s ease 0.1s;
+      -moz-transition: all 0.2s ease 0.1s;
+      transform-origin: 50% 50% -25px;
+      -webkit-transform-origin: 50% 50% -25px;
+      -moz-transform-origin: 50% 50% -25px;
+  }
+
+  .b07_3d_double_roll:hover div:nth-child(1) {
+      background-color: #000000;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      transform: rotateX(-90deg);
+      -webkit-transform: rotateX(-90deg);
+      -moz-transform: rotateX(-90deg);
+  }
+
+  .b07_3d_double_roll:hover div:nth-child(2) {
+      color: #ffffff;
+      transition: all 0.2s ease;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+  }
+
+  .b07_3d_double_roll:hover div:nth-child(3) {
+      background-color: #000000;
+      transition: all 0.2s ease 0.1s;
+      -webkit-transition: all 0.2s ease 0.1s;
+      -moz-transition: all 0.2s ease 0.1s;
+      transform: rotateX(90deg);
+      -webkit-transform: rotateX(90deg);
+      -moz-transform: rotateX(90deg);
+  }
+
+  .b07_3d_double_roll:hover div:nth-child(4) {
+      color: #ffffff;
+      transition: all 0.2s ease 0.1s;
+      -webkit-transition: all 0.2s ease 0.1s;
+      -moz-transition: all 0.2s ease 0.1s;
+      transform: rotateX(0deg);
+      -webkit-transform: rotateX(0deg);
+      -moz-transform: rotateX(0deg);
+  }
+
+  .png{
+    width:100%;
+  }
 </style>
 </head>
 
@@ -61,71 +324,40 @@
     <span class="carousel-control-next-icon"></span>
   </a>
 </div>
-<div id="site">
-
-	<div id="content">
-		<div id="products">
-			<ul>
-				<li>
-					<div class="product-image">
-						<img src="images/pizza1.jpg" alt="" />
-					</div>
-					<div class="product-description" data-name="Pizza #1" data-price="5">
-						<h3 class="product-name">Pizza #1</h3>
-						<p class="product-price">&euro; 5</p>
-						<form class="add-to-cart" action="cart.html" method="post">
-							<div>
-								<label for="qty-1">Quantity</label>
-								<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
-							</div>
-							<p><input type="submit" value="Add to cart" class="btn" /></p>
-						</form>
-					</div>
-				</li>
-
-				<li>
-					<div class="product-image">
-						<img src="images/pizza2.jpg" alt="" />
-					</div>
-					<div class="product-description" data-name="Pizza #2" data-price="8">
-						<h3 class="product-name">Pizza #2</h3>
-						<p class="product-price">&euro; 8</p>
-						<form class="add-to-cart" action="cart.html" method="post">
-							<div>
-								<label for="qty-2">Quantity</label>
-								<input type="text" name="qty-2" id="qty-2" class="qty" value="1" />
-							</div>
-							<p><input type="submit" value="Add to cart" class="btn" /></p>
-						</form>
-					</div>
-				</li>
-
-				<li>
-					<div class="product-image">
-						<img src="images/pizza3.jpg" alt="" />
-					</div>
-					<div class="product-description" data-name="Pizza #3" data-price="11">
-						<h3 class="product-name">Pizza #3</h3>
-						<p class="product-price">&euro; 11</p>
-						<form class="add-to-cart" action="cart.html" method="post">
-							<div>
-								<label for="qty-3">Quantity</label>
-								<input type="text" name="qty-3" id="qty-3" class="qty" value="1" />
-							</div>
-							<p><input type="submit" value="Add to cart" class="btn" /></p>
-						</form>
-					</div>
-				</li>
 
 
 
-			</ul>
-		</div>
-	</div>
+<div style="background-image: url('images/pizza1.jpg');">
+<div class="container">
+        <div class="frame">
+            <div class="center">
+                <div class="card card-1">
+                    <img class="img" src="images/pizza2.jpg"></img>
+                    <a href="shop.html"><h3 style="align:center;">Pizza - order now</h3></a>
+                </div>
+                <div class="card card-2">
+                    <img class="img" src="images/pizza1.jpg"></img>
+                    <a href="shop.html"><h3 style="align:center;">Pizza - order now</h3></a>
+                </div>
+                <div class="card card-3">
+                      <img class="img" src="images/pizza3.jpg"></img>
+                      <a href="shop.html"><h3 style="align:center;">Pizza - order now</h3></a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
 
+  <a href="shop.html">
+      <div class="button_base b07_3d_double_roll">
+          <div>See Menu</div>
+          <div>See Menu</div>
+          <div>See Menu</div>
+          <div>See Menu</div>
+      </div>
+      </a>
+<img class="png" src="images/1.png"></img>
 
-
-</div>
 
 <!-- <footer id="site-info">
 		Copyright &copy; Winery
