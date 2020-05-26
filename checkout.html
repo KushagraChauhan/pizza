@@ -6,19 +6,55 @@
 <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.shop.js"></script>
+<link rel="stylesheet" href="assets/css/animate-3.7.0.css">
+<link rel="stylesheet" href="assets/css/font-awesome-4.7.0.min.css">
+<link rel="stylesheet" href="assets/css/bootstrap-4.1.3.min.css">
+<link rel="stylesheet" href="assets/css/owl-carousel.min.css">
+<link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body id="checkout-page">
 
 <div id="site">
-	<div class="header">
-		<a href="#default" class="logo">CompanyLogo</a>
-		<div class="header-right">
-			<a  href="index.html">Home</a>
-			<a  href="cart.html">Cart</a>
-			<a href="#about">About</a>
-		</div>
-	</div>
+	<header class="header-area header-area2">
+				<div class="container">
+						<div class="row">
+								<div class="col-lg-2">
+										<div class="logo-area">
+												<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+										</div>
+								</div>
+								<div class="col-lg-10">
+										<div class="custom-navbar">
+												<span></span>
+												<span></span>
+												<span></span>
+										</div>
+										<div class="main-menu main-menu2">
+												<ul>
+														<li class="active"><a href="index.html">home</a></li>
+														<li><a href="#">about</a></li>
+														<li><a href="shop.html">menu</a></li>
+
+
+														<li><a href="cart.html">Cart</a></li>
+												</ul>
+										</div>
+								</div>
+						</div>
+				</div>
+		</header>
+
+		<section class="banner-area banner-area2 menu-bg text-center">
+				<div class="container">
+						<div class="row">
+								<div class="col-lg-12">
+										<h1><i>Checkout</i></h1>
+								</div>
+						</div>
+				</div>
+		</section>
 	<div id="content">
 		<h1>Checkout</h1>
 			<table id="checkout-cart" class="shopping-cart">
@@ -45,7 +81,7 @@
 		 </div>
 
 		 <form class="form" action="order.html" method="post" id="checkout-order-form">
-		 	<h2>Your Details</h2>
+		 	<h2 style="color:black;">Your Details</h2>
 
 		 	<fieldset id="fieldset-billing">
 		 		<legend>Billing</legend>
@@ -73,8 +109,8 @@
 		 			<label for="country">Country</label>
 		 			<select name="country" id="country" data-type="string" data-message="This field cannot be empty">
 		 				<option value="">Select</option>
-		 				<option value="US">USA</option>
-		 				<option value="IT">Italy</option>
+						<option value="IN">India</option>
+						<option value="GE">Germany</option>
 		 			</select>
 		 		</div>
 		 	</fieldset>
@@ -109,13 +145,13 @@
 		 			<label for="scountry">Country</label>
 		 			<select name="scountry" id="scountry" data-type="string" data-message="This field cannot be empty">
 		 				<option value="">Select</option>
-		 				<option value="US">USA</option>
-		 				<option value="IT">Italy</option>
+		 				<option value="IN">India</option>
+		 				<option value="GE">Germany</option>
 		 			</select>
 		 		</div>
 		 	</fieldset>
 
-		 	<p><input type="submit" id="submit-order" value="Submit" class="btn" /></p>
+		 	<p><input type="submit" id="submit-order" value="Submit" class="template-btn mt-3" /></p>
 
 		 </form>
 	</div>
